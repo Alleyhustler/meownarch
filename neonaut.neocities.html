@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>capstasher</title>
+<link rel="icon"  type="image/png" href="/favicon.png">
+<style>
+
+@font-face {
+  font-family: newspaper;
+  src: url(OldNewspaperTypes.ttf);
+} 
+@font-face {
+  font-family: helvetica;
+  src: url(Helvetica.ttf);
+} 
+@font-face {
+  font-family: handwritten;
+  src: url(PhontPhreaksHandwriting.ttf);
+}
+
+body{
+  background-color: #090000;
+  color: #C30A00;
+  font-family: newspaper;
+  font-size: 18px
+}
+
+a {
+  text-decoration: none;
+  color: #c72026
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #B4B2A4;
+  color: #25272b;
+  text-align: left;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -160px;
+  outline-style:solid;
+  outline-color:#25272b;
+  outline-width:1px;
+  box-shadow: 5px 5px 5px #25272b;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.2s;
+  animation: fadeIn 0.2s;
+}
+
+</style>
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+  </head>
+  <body>
+    <TABLE WIDTH="40%" ALIGN="center" style="padding:4px">
+      <TR>
+        <TD>
+          <audio class="audioplayer" autoplay loop>
+            <source src="https://vgmsite.com/soundtracks/earthbound-snes/noitsemgmg/164%20The%20Place.mp3">
+          </audio>
+          <h1 align="center"> ERROR 404: YOU'RE LOST</h1>
+          <p align="center"> I'm not sure how you found yourself here. Certainly, this isn't where you wanted, nor where you should be. Perhaps a broken link, perhaps a mistyped URL. It doesnt matter now. Now you're here. You're among the lost. And now you get to</p>
+          <h2 align="center"> PEEP THE HORROR</h2>
+          <img src="pulsatingmass.gif" class="center" style="width:40%">
+          <p align="center"> It's the funniest thing I have ever seen! Although rumour has it, every time it is displayed, a person dies from seeing it, and the rest burst in uncontrollable laughter. Thats surely just a myth, though. It's just a really funny image!</p>
+      	</td>
+      </tr>
+    </table>
+  </body>
+</html>

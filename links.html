@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from capstasher.neocities.org/links by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2025 08:19:09 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capstasher</title>
+    <link rel="icon"  type="image/png" href="favicon.png">
+ 
+<style>
+ 
+body{
+  background: rgba(0, 0, 0, .1) url(pattern3.gif);
+  background-blend-mode: darken;
+}
+
+
+@font-face {
+  font-family: monument;
+  src: url(Monument.ttf);
+}
+
+@font-face {
+  font-family: Dovestype;
+  src: url(Dovestype.ttf);
+}
+
+
+div {
+  font-family: Dovestype;
+}
+
+@font-face {
+  font-family: drmarz;
+  src: url(Dr.Marz_i.otf)
+}
+
+@font-face {
+  font-family: Victorian;
+  src: url(victorian.otf);
+}
+
+a {
+  color: #c72026;
+}
+
+#all{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 33%;
+  height: 80%;
+
+}
+ 
+#container{
+  width: 100%;
+  height: 100%;
+  background-color: #decdbd;
+  padding: 5px;
+  box-shadow: 7px 7px #25272b;
+  outline: 2px solid #25272b
+}
+ 
+#header{
+  height: 15%;
+  background-image: url('paper.png');
+  background-size: cover;
+  background-position: top left;
+  padding: 0.93%;
+  position: relative;
+}
+ 
+#header h1{
+  font-family: 'Victorian';
+  font-weight: normal;
+  color: #c72026;
+  font-size: 105px;
+  letter-spacing: 3.5px;
+  text-shadow: 1px 1px 0px #25272b;
+  margin: 3px;
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+}
+ 
+#content{
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 79%;
+  padding: 4px;
+  text-align: justify;
+  color: #765455;
+  margin-bottom: 0.93%;
+  margin-top: 0.46%;
+}
+ 
+#content p{
+  margin-top: 0px;
+  font-size: 16px;
+}
+ 
+#bottom{
+  height: 5%;
+  margin-top: 0.93%;
+  margin-bottom: 0.93%;
+  background-image: url(paper2.png);
+  background-size: cover;
+  background-position: top left;
+}
+ 
+#credit a{
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+ 
+#nav{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+ 
+#nav a{
+  color: #765455;
+  opacity: 1;
+  text-decoration: none;
+}
+ 
+#nav a:hover{
+  color: #58453d;
+  opacity: 1;
+}
+ 
+::-webkit-scrollbar{
+  width: 4px; 
+}
+ 
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+ 
+::-webkit-scrollbar-thumb{
+  background-color: #434750;  
+}
+ 
+#credit{
+  font-size: 13px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-family: 'Garamond', serif;
+}
+
+.audioplayer {
+  width: 33%;
+  height: 25px;
+  top: 0px;
+  left: 0px;
+  font-family: 'Dovestype'
+}
+
+#audiobar {
+  height: 4.25%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* {box-sizing: border-box}
+
+/* Style the tab */
+.tab {
+  float: left;
+  
+  background-color: #decdbd;
+  width: 30%;
+  height: 100%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: #decdbd ;
+  color: #25272b;
+  padding: 22px 16px;
+  width: 100%;
+  border: 0px solid #765455; /* border and outline togglable here if needed, but i think it looks better without*/
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: #765455;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  color: #c72026;
+  text-decoration: underline;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 0px solid #765455; /* border and outline togglable here if needed, but i think it looks better without*/
+  outline: 0px solid #765455;
+  width: 70%;
+  border-left: none;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #decdbd;
+  color: #25272b;
+  text-align: center;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -160px;
+  outline-style:solid;
+  outline-color:#25272b;
+  outline-width:1px;
+  box-shadow: 4px 4px #25272b;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.2s;
+  animation: fadeIn 0.2s;
+}
+</style>
+<script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+function myFunction1() {
+  var popup = document.getElementById("myPopup1");
+  popup.classList.toggle("show");
+}
+  var audio = document.getElementById("myaudio");
+  audio.volume = 0.5;
+</script>
+</head>
+ 
+<body>
+<div id="all">
+ 
+<div id="container">
+ 
+<div id="header">
+ 
+<div id="nav">
+ 
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="journey.html">Articles</a>
+<a href="adnotationes.html">Adnotationes</a>
+  <a href="links.html">Hyperlinks</a>
+  <a href="contact.html">Contact</a>
+ 
+</div>
+<h1>Meownarch</h1></div>
+<div id="content">
+
+ <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Neocities')">Neocities</button>
+  <button class="tablinks" onclick="openCity(event, 'MUW')">Most Useful Websites</button>
+  <button class="tablinks" onclick="openCity(event, 'AI/Machine Learning')">AI/Machine Learning</button>
+  <button class="tablinks" onclick="openCity(event, 'Archival')">Archival/Libraries</button>
+  <button class="tablinks" onclick="openCity(event, 'Curiosities')">Curiosities</button>
+  <button class="tablinks" onclick="openCity(event, 'Cyberpunk')">Cyberpunk</button>
+  <button class="tablinks" onclick="openCity(event, 'Fiction')">Web Fiction</button>
+  <button class="tablinks" onclick="openCity(event, 'Pirate')"><i>Legal</i> Content</button>
+</div>
+<div class="tabcontent">
+<img src="headpiece2.png" class="center" width="100%">
+<h2> Welcome to My Hyperlink Directory </h2>
+<img src="spiderweb.png" align="right" width="45%" style="margin:3px">
+<p> All the various sites on the web are connected by Hyperlinks, which help you travel from webportal to webportal. Before you there stands my collection of these hyperlinks, gathered over the years. They are not necesarrily things I have an interest in, but things that I believe may present some use to someone at some point in the future.</p>
+<img src="tailpiece3.png" class="center" width="70%" >
+</div>
+<div id="Neocities" class="tabcontent">
+<img src="headpiece2.png" class="center" width="100%">
+  <h3>Neocities</h3>
+  <p>
+    <ul>
+      <li><u>Friends</u></li>
+      <ul>
+        <li><a href="https://cidoku.neocities.org/"><img src="the-cidoku-network2.gif"></a> - Cidoku</li>
+        <li><a href="https://psionicblades.neocities.org/"><img src="cyberpunkcorner.gif"></a> - Cyberpunk Corner</li>
+        <li><a href="https://cybertomboy.neocities.org/"><img src="cybertomboy2.png"></a> - Cybertomboy</li>
+        <li><a href="https://didntask.neocities.org/"><img src="didntask.gif"></a> - didn't ask</li>
+        <li><a href="https://ismringofpower.neocities.org/"><img src="ISM2.png"></a> - ISM Ring of Power</li>
+        <li><a href="https://iwillneverbehappy.neocities.org/"><img src="iwnbh2.gif"></a> - i will never be happy</li>
+        <li><a href="https://literaturegirl.neocities.org/"><img src="literaturegirl2.png"></a> - Literature Girl</li>
+        <li><a href="https://lyricaltokarev.neocities.org/"><img src="lyricaltokarev.gif"></a> - Lyrical Tokarev</li>
+        <li><a href="https://ongezell.com/"><img src="ongezell.gif"></a> - Ongezell</li>
+        <li><a href="https://pagespages.neocities.org/"><img src="pages_pages-2.jpg"></a> - Page's Pages</li>
+        <li><a href="https://pleurodelinae.neocities.org/"><img src="pleurodelinae2.png"></a> - PLEURODELINAE</li>
+        <li><a href="https://pnnamerica.neocities.org/"><img src="PNN2.png"></a> - PNN America</li>
+        <li><a href="https://sugarteara.neocities.org/"><img src="sugar2.gif"></a> - sugarteara</li>
+        <li><a href="https://temina.neocities.org/"><img src="temina2.png"></a> - Temina</li>
+        <li><a href="https://satyrs.eu/"><img src="satyrs2.png"></a> - Þe Satyrs’ Foreſt</li>
+        <li><s><a href="https://volk.neocities.org/"><img src="volkvalhalla.gif"></a> - Volk's Valhalla</s> (I hope he's alright)</li>
+        <li><a href="https://webpage-1990-colourised.neocities.org/"><img src="www-webpage-1990-colourised.gif"></a> - Webpage-1990-Colourised</li>
+      </ul><br>
+      <li><u>Inspiring Website</u> - [<span class="popup" onclick="myFunction1()" style="color:#c72026;">explanation<span class="popuptext" id="myPopup1"><span style="color:#c72026">[explanation]</span>: You see, dear reader, these websites not only have an astounding sense of design, like most websites I tend to follow, but they have been instrumental in inspiring the style and design of this website. </span></span>]</li>
+      <ul>
+        <li><a href="https://errormine.neocities.org/"><img src="errormine-button2.gif"></a> - errormine</li>
+        <li><a href="https://ongezell.com/"><img src="ongezell.gif"></a> - Ongezell</li>
+        <li><a href="https://pleurodelinae.neocities.org/"><img src="pleurodelinae2.png"></a> - PLEURODELINAE</li>
+        <li><a href="https://nymphblood.neocities.org/"><img src="primordial-dungeon2.gif"></a> - Primordial Dungeon</li>
+        <li><a href="https://ribo.zone/"><img src="ribose2.png"></a> - ribose</li>
+        <li><s><a href="https://secret-garden.neocities.org/"><img src="secret-garden2.png"></a> - SECRET GARDEN</s></li>
+        <li><a href="https://satyrs.eu/"><img src="satyrs2.png"></a> - Þe Satyrs’ Foreſt</li>
+        <li><a href="https://zeusofthecrows.neocities.org/"><img src="zeus.png"></a> - Zeus of the Crows</li>
+      </ul><br>
+      <li><u>Mutuals</u></li>
+      <ul>
+        <li><a href="https://leviathren.neocities.org/"><img src="leviathren2.gif"></a> - Abyssal</li>
+        <li><a href="https://amriel.neocities.org/"><img src="amriel2.gif"></a> - amriel</li>
+        <li><a href="https://eplenas.neocities.org/"><img src="angelsroam.png"></a> - Angel's Roam</li>
+        <li><a href="https://antikrist.neocities.org/"><img src="antikrist.gif"></a> - AntiKrist</li>
+        <li><a href="https://apnet.neocities.org/"><img src="apnet2.gif"></a> - Apnet</li>
+        <li><a href="https://arkmsworld.neocities.org/"><img src="arkmsworld.gif"></a> - Arkm's World</li>
+        <li><a href="https://arlita.neocities.org/"><img src="arlita2.gif"></a> - arlita's internet page</li>
+        <li><a href="https://beanbottles.neocities.org/"><img src="beanbottles2.gif"></a> - bean's bottles</li>
+        <li><a href="https://bruisedgh0st.neocities.org/"><img src="bruised-ghost2.gif"></a> - bruisedgh0st</li>
+        <li><a href="https://buryevil.neocities.org/"><img src="fretnoize3.png"></a> - 𝖇𝖚𝖗𝖞𝖊𝖛𝖎𝖑</li>
+        <li><a href="https://cabbagesorter.neocities.org/"><img src="cabbagesorter2.gif"></a> - cabbage sorter</li>
+        <li><s><a href="https://takkyuudou2003fan.neocities.org/"><img src="takkyuudou-2003-fan.gif"></a> - cat corner entryway</s></li>
+        <li><a href="https://channelonion.neocities.org/"><img src="channelonion.png"></a> - Channel Onion</li>
+        <li><a href="https://cidoku.neocities.org/"><img src="the-cidoku-network2.gif"></a> - Cidoku</li>
+        <li><a href="https://circuitghost.neocities.org/"><img src="circuit-ghost.gif"></a> - circuitghost</li>
+        <li><a href="https://concon.soy/"><img src="concon-soy2.gif"></a> - connor7000</li>
+        <li><a href="https://psionicblades.neocities.org/"><img src="cyberpunkcorner.gif"></a> - Cyberpunk Corner</li>
+        <li><a href="https://cybertomboy.neocities.org/"><img src="cybertomboy2.png"></a> - Cybertomboy</li>
+        <li><a href="https://dannarchy.com/"><img src="now-dannarchy2.gif"></a> - Dannarchy</li>
+        <li><a href="https://didntask.neocities.org/"><img src="didntask.gif"></a> - didn't ask</li>
+        <li><a href="https://electropsyoptica.neocities.org/"><img src="electropsyoptica.gif"></a> - electropsyoptica</li>
+        <li><a href="https://errormine.neocities.org/"><img src="errormine-button2.gif"></a> - errormine</li>
+        <li><a href="https://exephile.neocities.org/"><img src="exephile.gif"></a> - exephile</li>
+        <li><a href="https://familyguymadness.neocities.org/"><img src="family-guy-madness-2.gif"></a> - Family Guy Madness</li>
+        <li><a href="https://feelingmachine.moe/"><img src="feelingmachine2.gif"></a> - feeling machine.</li>
+        <li><a href="https://fi-do-manin.neocities.org/"><img src="fidomanin2.png"></a> - Fidomanin</li>
+        <li><a href="https://flying-with-quills.neocities.org/"><img src="flying-with-quills2.gif"></a> - Flying with Quills</li>
+        <li><a href="https://spells.neocities.org/"><img src="spells2.gif"></a> - HedgeWytchery</li>
+        <li><a href="https://iwillneverbehappy.neocities.org/"><img src="iwnbh2.gif"></a> - i will never be happy</li>
+        <li><a href="https://imaginings.neocities.org/"><img src="imaginings.png"></a> - imaginings.</li>
+        <li><a href="https://ismringofpower.neocities.org/"><img src="ISM2.png"></a> - ISM Ring of Power</li>
+        <li><a href="https://jlehr.neocities.org/"><img src="jerry-lehr-2.gif"></a> - Jerry Lehr's Shell</li>
+        <li><a href="https://keltokel.neocities.org/"><img src="keltokel3.png"></a> - Keltokel</li>
+        <li><a href="https://lazybones.neocities.org/"><img src="lazybones2.png"></a> - Lazy Bones</li>
+        <li><a href="https://theliterarybisexual.neocities.org/"><img src="the-literary-bisexual-5.jpg"></a> - The Literary Bisexual</li>
+        <li><a href="https://literaturegirl.neocities.org/"><img src="literaturegirl2.png"></a> - Literature Girl</li>
+        <li><a href="https://lotus-cube.neocities.org/"><img src="lotus-cube2.gif"></a> - Lotus's Cube</li>
+        <li><a href="https://lyricaltokarev.neocities.org/"><img src="lyricaltokarev.gif"></a> - Lyrical Tokarev</li>
+        <li><a href="https://melonking.net/"><img src="melon-king2.gif"></a> - Melon King</li>
+        <li><a href="https://misterdizzy.neocities.org/"><img src="mister-dizzy2.png"></a> - Mister Dizzy</li>
+        <li><a href="https://moheb-rofail.neocities.org/"><img src="moheb-rofail2.png"></a> - Moheb Rofail</li>
+        <li><a href="https://blamensir.neocities.org/"><img src="st-blamensir.gif"></a> - Monastery of St.Blamensir</li>
+        <li><a href="https://mottemotte.neocities.org/"><img src="motte2.png"></a> - Motte Motte</li>
+        <li><s><a href="https://mutagensoup.neocities.org/"><img src="mutagensoup.png"></a> - mutagensoup</s></li>
+        <li><a href="https://myrrh.neocities.org/"><img src="myrrh2.png"></a> - Myrrh</li>
+        <li><a href="https://newdigitalera.neocities.org/"><img src="new-digital-era2.gif"></a> - New Digital Era</li>
+        <li><a href="https://the0bserver.neocities.org/"><img src="the-observer.png"></a> - The 0bserver</li>
+        <li><a href="https://ongezell.com/"><img src="ongezell.gif"></a> - Ongezell</li>
+        <li><a href="https://paintkiller.neocities.org/"><img src="paintkiller2.gif"></a> - PAINTKILLER</li>
+        <li><a href="https://pagespages.neocities.org/"><img src="pages_pages-2.jpg"></a> - Page's Pages</li>
+        <li><a href="https://pandem0nium.neocities.org/"><img src="pandemonium2.png"></a> - ⸸ pandæmonium ⸸</li>
+        <li><a href="https://pleurodelinae.neocities.org/"><img src="pleurodelinae2.png"></a> - PLEURODELINAE</li>
+        <li><a href="https://pnnamerica.neocities.org/"><img src="PNN2.png"></a> - PNN America</li>
+        <li><a href="https://preservedfigs.uk/"><img src="preservedfigs2.png"></a> - Preserved Figs</li>
+        <li><a href="https://nymphblood.neocities.org/"><img src="primordial-dungeon2.gif"></a> - Primordial Dungeon</li>
+        <li><s><a href="https://purinland.neocities.org/"><img src="purinland2.png"></a> - purinland</s></li>
+        <li><a href="https://rpgfan54.neocities.org/"><img src="rpgfan54-5.png"></a> - RPGFAN54 (work in progress)</li>
+        <li><a href="https://sablecradle.neocities.org/"><img src="sablecradle.gif"></a> - Sable Cradle</li>
+        <li><a href="https://schizopunk-media.neocities.org/"><img src="schizopunk-media2.png"></a> - Schizopunk Media</li>
+        <li><s><a href="https://secret-garden.neocities.org/"><img src="secret-garden2.png"></a> - SECRET GARDEN</s></li>
+        <li><a href="https://skullmund.neocities.org/"><img src="skullmund2.gif"></a> - SKULLMUND</li>
+        <li><a href="https://sleepy-sage.neocities.org/"><img src="sleepysage2.png"></a> - sleepy sage</li>
+        <li><a href="https://sugarteara.neocities.org/"><img src="sugar2.gif"></a> - sugarteara (moved to <a href="feelingmachine.neocities.org/index.html">feeling machine</a>)</li>
+        <li><a href="https://temina.neocities.org/"><img src="temina2.png"></a> - Temina</li>
+        <li><a href="https://satyrs.eu/"><img src="satyrs2.png"></a> - Þe Satyrs’ Foreſt</li>
+        <li><a href="https://traumakyabajou.neocities.org/"><img src="traumakyabajou2.gif"></a> - TRAUMAKYABAJOU</li>
+        <li><a href="https://unimaginable-heights.neocities.org/"><img src="unimaginable-heights2.gif"></a> - Unimaginable Heights</li>
+        <li><a href="https://humanityisnotbeautiful.neocities.org/"><img src="velvet-blue2.png"></a> - Velvet Blue</li>
+        <li><s><a href="https://vincentsdungeon.com/"><img src="vincentsdungeon2.gif"></a> - vincent's dungeon</s></li>
+        <li><s><a href="https://volk.neocities.org/"><img src="volkvalhalla.gif"></a> - Volk's Valhalla</s></li>
+        <li><a href="https://vegetusvox.neocities.org/"><img src="voxbox.png"></a> - The Vox Box</li>
+        <li><a href="https://wmbu.net/"><img src="wave-mbu2.png"></a> - Wave MBU</li>
+        <li><a href="https://webpage-1990-colourised.neocities.org/"><img src="www-webpage-1990-colourised.gif"></a> - Webpage-1990-Colourised</li>
+        <li><a href="https://zeusofthecrows.neocities.org/"><img src="zeus.png"></a> - Zeus of the Crows</li>
+      </ul>
+    </ul>
+  </p>
+<img src="tailpiece.png" class="center" width="50%" >
+</div>
+<div id="MUW" class="tabcontent">
+<img src="headpiece2.png" class="center" width="100%">
+  <h3>Most Useful Websites</h3>
+  <p>Across my journey as a webmaster, and general internet user, I found a few websites that I kept coming back to. These may be specific to my uses, however I find them to be the most useful websites (and tools) on the internet, and I am forever indebted to the people who created them and allowed them to flourish.</p>
+  <p>
+    <ul>
+      <li><a href="https://www.dafont.com/">DaFont</a></li>
+      <ul>
+        <li>The single largest archive of free (in part or fully) fonts on the internet.</li>
+      </ul>
+      <li><a href="https://ezgif.com/">Ezgif</a></li>
+      <ul>
+        <li>You may not be able to appreciate how much gifs have shaped the internet, especially neocities. However, if you ever find yourself in need of a tool to make or edit one, this free website is by far the best.</li>
+      </ul>
+      <li><a href="https://www.oldbookillustrations.com/">Old Book Illustrations</a></li>
+      <li><a href="https://www.fromoldbooks.org/">From Old Books</a></li>
+      <ul>
+        <li>This website, and the following one, are for certain the ones most applicable to me. However, if you feel like sprucing up your website, or some other form of craft, with the decorations of artists long departed from this world, these two are the prime places for it.</li>
+      </ul>
+      <li><a href="https://downloads.khinsider.com/">KH Insider</a></li>
+      <ul>
+        <li>To my knowledge, the most comprehensive library of video game music out there. So particular I even find, now and then, pieces not even available on Youtube. Great resource for indie webmasters who enjoy to overuse autoplay music (like me).</li>
+      </ul>
+      <li><a href="https://webamp.org/">WebAmp</a></li>
+      <li><a href="https://www.scmplayer.net/">SCM Player</a></li>
+      <ul>
+        <li>Now that you have the music you plan to use, you need a player! However, as we know, the html audio tag often gets boring, or may not fit in with your style, or you may just want a greater library of songs on a single page! These two players have you covered, and they work fantastically, with plenty of themes to satiate your visual too.</li>
+      </ul>
+      <li><a href="https://skins.webamp.org/">Winamp Skin Museum</a></li>
+      <li><a href="https://skins.scmplayer.net/">Custom Skins for SCM Player</a></li>
+      <ul>
+        <li>Here are the aforementioned skins. However it is quite easy to make your own ones! Do give it a try!</li>
+      </ul>
+      <li><a href="https://archive.ph/">Archive dot today</a></li>
+      <ul>
+        <li>The truest website archive out there. It's library may not be as extensive as that of the Wayback Machine, however they swear by preserving the internet in it's true form, without bending to bad actors.</li>
+      </ul>
+      <li><a href="https://archive.org/">The Internet Archive</a></li>
+      <ul>
+        <li>I have my personal gripes with the Internet Archive, specifically regarding censorship and removal of data on command from the Wayback Machine, however when you're under as much fire as they have been from litigious industries like the print publishing one it's hard to blame them (hard but not impossible). Very good public library, particularly of software.</li>
+      </ul>
+      <li><a href="https://www.myabandonware.com/">My Abandonware</a></li>
+      <ul>
+        <li>The largest library of "abandonware" video games, games whose publisher has gone bankrupt, or who have otherwise completely disregarded a piece of software, with no intent on protecting the rights to it.</li>
+      </ul>
+      <li><a href="https://www.gimp.org/">GIMP - GNU Image Manipulation Software</a></li>
+      <ul>
+        <li>The free open source replacement for Photoshop's image manipulation tools. I hold great disdain for Ad*be, and propietary software as a whole, so this has become like an old friend to me. Highly reliable. Do not try to draw a circle in it. Leave that for our next tool.</li>
+      </ul>
+      <li><a href="https://krita.org/en/">Krita</a></li>
+      <ul>
+        <li>The field of digital art software is almost as bad as the one of browsers used to be (or God forbid, consoles in the 2000s), and I dare not approach the topic of which is best. However, amongst free open source digital art software, Krita reigns supreme.</li>
+      </ul>
+      <li><a href="https://www.blender.org/">Blender</a></li>
+      <ul>
+        <li>The Krita of 3D. However, unlike Krita, blender is pretty much industry standard for 3D modelling. Use it with care.</li>
+      </ul>
+      <li><a href="https://github.com/aseprite/aseprite">Aseprite</a></li>
+      <ul>
+        <li>The champion of pixel art software. Did you know Aseprite is free if you <a href="https://www.youtube.com/watch?v=Ki-qvNx6CaU">compile it yourself</a>? It's not some "just pirate it bro" tip, it is intended by the developers! However, if you wish to support the developers, you can buy it from the <a href="https://www.aseprite.org/">official website</a>.</li>
+      </ul>
+      <li>Audacity</li>
+      <ul>
+        <li>You see... I would include Audacity. It used to be the powerhouse of 2000-2010s amateur audio editing. And to some extent, those features are still there. However it has seen a very shameful fall from grace as of the new management. I plan to include the official page if it ever reverts to it's former, ad-less, microtransaction-less glory. Until then, install one of the <a href="https://support.audacityteam.org/additional-resources/changelog/older-versions">older versions</a>.</li>
+      </ul>
+      <li><a href="https://www.waifu2x.net/">Waifu2x</a></li>
+      <ul>
+        <li>For a long time, the controversy around AI used to be aimless anger. However, now, the problem is very much real, and the internet is filled with all sorts of AI slop. However, the early AI era produced some great tools, like this one. It uses an algorith to enlarge pictures, for when GIMP won't do the trick. It may, sometimes, make it look like the picture was AI made though, so use it at your own risk.</li>
+      </ul>
+      <li><a href="http://libreoffice.org/">Libre Office</a></li>
+      <ul>
+        <li>The best open source Office365 replacement. Does all that 365 does suprisingly well. Documents may sometimes have formatting issues when opened on their 365 counterpart though! Learned that from experience.</li>
+      </ul>
+      <li><a href="https://www.overleaf.com/">Overleaf</a></li>
+      <ul>
+        <li>By far the best in-browser LaTeX editor. It has many templates and extensions available to use, all for free. It got me through many a paper.</li>
+      </ul>
+      <li><a href="https://obsproject.com/">OBS - Open Broadcaster Software</a></li>
+      <ul>
+        <li>Another free and open source industry standard, OBS is streaming's saving grace. Without it, the industry would be quite impossible to exist in its current form. It has a load of free plug-ins too, and it never ceases to amaze me what people can do with it.</li>
+      </ul>
+      <li><a href="https://stackoverflow.com/questions">Stack Overflow</a></li>
+      <ul>
+        <li>"<span style="font-family: monument">Before me things create were none, save things <br> Eternal, and eternal I endure. <br> All hope abandon ye who enter here.</span>". <br> This quote was etched above the gates of hell, in the first book of Dante Aligheri's Divine Comedy, Inferno. Something very similar must surely be inscribed in the html file of this forum, above it, just out of view of your browser. You may not see it, but its presence is felt. Such is the typical experience of looking to an answer for your coding problem and ending up here. However, sometimes (many times really, I am just being dramatic), you may find what you're seeking.</li>
+      </ul>
+      <li><a href="https://neocities.org/">Neocities</a></li>
+      <ul>
+        <li>The home of the personal web. <span style="color: #c72026"><B>⇐YOU ARE HERE</B></span></li>
+      </ul>
+    </ul>
+  </p>
+<img src="tailpiece.png" class="center" width="50%" >
+</div>
+<div id="AI/Machine Learning" class="tabcontent">
+<img src="headpiece2.png" class="center" width="100%">
+  <h3>AI/Machine Learning</h3>
+  <p>
+    <ul>
+      <li><a href="https://beta.elevenlabs.io/speech-synthesis">ElevenLabs Speech Synthesis</a><span style="color: #c72026; font-family:drmarz"> HOT!</span></li>
+      <li><a href="https://www.twitch.tv/watchmeforever">Nothing Forever</a> (a.k.a. Infinite Seinfeld)<span style="color: #c72026; font-family:drmarz"> HOT!</span></li>
+      <li><a href="https://github.com/comfyanonymous/ComfyUI">Stable Diffusion</a><span style="color: #c72026; font-family:drmarz"> HOT!</span></li>
+      <li><a href="https://www.midjourney.com/home/">Midjourney</a><span style="color: #c72026; font-family:drmarz"> HOT!</span></li>
+      <li><a href="https://chat.openai.com/chat">ChatGPT</a><span style="color: #c72026; font-family:drmarz"> HOT!</span></li>
+      <li><a href="https://beta.openai.com/playground">OpenAI Beta</a></li>
+      <li><a href="https://huggingface.co/spaces/dalle-mini/dalle-mini"> DALL-E mini</a></li>
+      <li><a href="http://immortality-roadmap.com/">Immortality Roadmap</a></li>
+      <li><s>Smart Sketch</s> (DEFUNCT)</li>
+      <li><s>Tachibana - Waifu Function</s> (DEFUNCT)</li>
+      <li><a href="https://www.artbreeder.com/">artbreeder</a> (formerly Ganbreeder)</li>
+      <li><a href="https://colab.research.google.com/github/nickwalton/AIDungeon/blob/master/AIDungeon_2.ipynb">AI Dungeon 2</a></li>
+      <li><a href="https://henk.tech/aid/">AI Dungeon 2 Unleashed</a></li>
+      <li><a href="https://waifulabs.com/">Waifu Labs</a></li>
+      <li><a href="https://make.girls.moe/#/">Make Girls Moe</a></li>
+      <li><a href="https://15.ai/">15.ai</a></li>
+      <li><a href="https://inspirobot.me/">InspiroBot</a></li>
+      <li><a href="https://app.inferkit.com/demo/">InferKit Demo</a> (formerly Talk to Transformer)</li>
+      <li><a href="https://marasmusine.itch.io/duncs-algomusic">Dunc's Algomusic</a></li>
+      <li><a href="https://www.gnoosic.com/">Gnod's Gnoosic</a></li>
+      <li><a href="https://www.music-map.com/">Gnod's Music-Map</a></li>
+      <li><a href="https://thisxdoesnotexist.com/">This X Does Not Exist</a></li>
+      <li><a href="https://thispersondoesnotexist.com/">This Person Does Not Exist</a></li>
+      <li><a href="https://thiscatdoesnotexist.com/">This Cat Does Not Exist</a></li>
+      <li><a href="https://thisrentaldoesnotexist.com/">This Rental Does Not Exist</a></li>
+      <li><a href="https://www.thiswaifudoesnotexist.net/">This Waifu Does Not Exist</a></li>
+      <li><a href="https://thisstartupdoesnotexist.com/">This Startup Does Not Exist</a></li>
+      <li><a href="https://stackroboflow.com/">This Question Does Not Exist</a> (a.k.a. Stack Roboflow)</li>
+      <li><a href="https://thisresumedoesnotexist.com/">This Resume Does Not Exist</a></li>
+      <li><a href="https://jschn.github.io/FaceApp/">This Emotion Does Not Exist</a></li>
+      <li><a href="https://www.derekau.net/this-vessel-does-not-exist">This Vessel Does Not Exist</a></li>
+      <li><a href="https://theselyricsdonotexist.com/">These Lyrics Do Not Exist</a></li>
+      <li><a href="https://thissnackdoesnotexist.com/">This Snack Does Not Exist</a></li>
+      <li><a href="https://imgflip.com/ai-meme">This Meme Does Not Exist</a></li>
+      <li><a href="https://thischairdoesnotexist.com/">This Chair Does Not Exist</a></li>
+      <li><a href="https://thisfootdoesnotexist.com/">This Foot Does Not Exist</a>(huh?)</li>
+      <li><a href="https://thisartworkdoesnotexist.com/">This Artwork Does Not Exist</a></li>
+      <li><a href="https://thischemicaldoesnotexist.com/">This Chemical Does Not Exist</a></li>
+      <li><a href="https://thishorsedoesnotexist.com/">This Horse Does Not Exist</a></li>
+      <li><a href="https://www.thisworddoesnotexist.com/">This Word Does Not Exist</a></li>
+      <li><a href="https://vole.wtf/this-mp-does-not-exist/">This MP Does Not Exist</a></li>
+      <li><a href="https://thisponydoesnotexist.net/">This Pony Does Not Exist</a></li>
+      <li><a href="https://www.thisautomobiledoesnotexist.com/">This Automobile Does Not Exist</a></li>
+      <li><a href="https://thiseyedoesnotexist.com/">This Eye Does Not Exist</a></li>
+      <li><s>This Butterfly Does Not Exist</s> (DEFUNCT)</li>
+      <li><s>This Bettle Does Not Exist</s> (DEFUNCT)</li>
+      <li><a href="http://thiscitydoesnotexist.com/">This City Does Not Exist</a></li>
+      <li><a href="https://thisfoodblogdoesnotexist.com/">This Food Blog Does Not Exist</a></li>
+      <li><a href="https://www.thisfuckeduphomerdoesnotexist.com/">This Fucked Up Homer Does Not Exist</a></li>
+      <li><a href="https://thisfursonadoesnotexist.com/">This Fursona Does Not Exist</a></li>
+      <li><a href="https://arthurfindelair.com/thisnightskydoesnotexist/">This Night Sky Does Not Exist</a></li>
+      <li><a href="https://www.thismusicvideodoesnotexist.com/">This Music Video Does Not Exist</a></li>
+      <li><a href="https://thisbeachdoesnotexist.com/">This Beach Does Not Exist</a></li>
+      <li><a href="http://thismapdoesnotexist.com/">This Map Does Not Exist</a></li>
+      <li><a href="https://thisideadoesnotexist.com/">This Idea Does Not Exist</a></li>
+      <li><a href="https://thissneakerdoesnotexist.com/">This Sneaker Does Not Exist</a></li>
+      <li><a href="https://thisbaseballplayerdoesnotexist.com/">This Baseball Player Does Not Exist</a></li>
+      <li><a href="https://thisflagdoesnotexist.com/">This Flag Does Not Exist</a></li>
+      <li><a href="https://hirestack.ai/thisinterviewdoesnotexist">This Interview Does Not Exist</a></li>
+      <li><a href="https://www.thisirisdoesnotexist.com/">This Iris Does Not Exist</a></li>
+      <li><a href="https://this-voice-does-not-exist.com/">This Voice Does Not Exist</a></li>
+     </ul>
+  </p>
+<img src="tailpiece.png" class="center" width="50%" >
+</div>
+
+<div id="Archival" class="tabcontent">
+<img src="headpiece2.png" class="center" width="100%">
+  <h3>Archival/Libraries</h3>
+  <p>
+    <ul>
+       <li><u>Software</u></li>
+       <ul>
+         <li><a href="https://archive.org/">Internet Archive</a></li>
+         <li><a href="https://wiki.archiveteam.org/">Archive Team</a></li>
+         <li><a href="https://archive.today/"> Archive.Today</a></li>
+         <li><a href="https://ismringofpower.neocities.org/"> ISM Ring of Power</a></li>
+         <li><a href="https://archive.org/details/1000_J2ME_Games_Pack">Nokia64's The J2ME Archive</a></li>
+         <li><a href="https://theromdepot.com/">The Rom Depot</a></li>
+         <li><a href="https://bluemaxima.org/flashpoint/">BlueMaxima's Flashpoint</a></li>
+         <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSDj58h_xUDPoz9n12x_kZvQW1VKO4AQOaNGaUmEtpFmL5q0R05Pr4qVZxxzH8CZT3ZLX6_ZX8muYzm/pubhtml">AlvRo's ROM Google Doc</a></li>
+         <li><a href="https://fantasyanime.com/games">FantasyAnime Games</a></li>
+         <li><a href="https://archive.org/search.php?query=subject%3A%22IBM+PC+Compatible%22">Internet Archive IBM PC Compatible Software</a></li>
+         <li><a href="https://dagobah.net/">Dagobah Flash Gallery</a></li>
+         <li><a href="http://hol.abime.net/">Amiga Hall of Light</a></li>
+         <li><a href="https://www.vector.co.jp/download/index_pc.html">Vector</a></li>
+         <li><a href="https://geocities.restorativland.org/">Restorativland Geocities Gallery</a></li>
+         <li><a href="https://mydora.restorativland.org/">Restorativland Mydora</a></li>
+         <li><a href="https://www.usenetarchives.com/">Usenet Archives</a></li>
+         <li><a href="http://textfiles.com/">Textfiles</a></li>
+         <li><a href="http://pdf.textfiles.com/">PDF.Textfiles</a></li>
+         <li><a href="http://artscene.textfiles.com/">ArtScene.Textfiles.Com</a></li>
+         <li><a href="http://cd.textfiles.com/">CD.Textfiles.Com</a></li>
+         <li><a href="http://web.textfiles.com/">Web.Textfiles.Com</a></li>
+         <li><a href="http://timeline.textfiles.com/">Timeline.Textfiles.Com</a></li>
+         <li><a href="http://audio.textfiles.com/">Audio.Textfiles.Com</a></li>
+         <li><a href="http://bbslist.textfiles.com/">BBSList.Textfiles.Com</a></li>
+       </ul>
+       <li><u>Hardware</u></li>
+       <ul>
+         <li><a href="http://ibm-1401.info/">The IBM 1401 Demo Lab and Restoration Project</a></li>
+       </ul>
+       <li><u>Magazines/Zines</u></li>
+       <ul>
+         <li><a href="http://amr.abime.net/magazines">Amiga Magazine Rack</a></li>
+         <li><a href="http://digest.textfiles.com/">Digest.Textfiles.Com</a></li>
+         <li><a href="http://pdf.textfiles.com/zines/">Pdf.Textfiles.Com Zines</a></li>
+         <li><a href="https://furrytimes.net/downloads/">Furry Times</a></li>
+       </ul>
+       <li><u>Internet Junk Drawers</u></li>
+       <ul>
+         <li><a href="http://jaruzel.com/textfiles/">Jaruzel's Textfiles</a></li>
+         <li><a href="http://jaruzel.com/blog/my-quake2-maps">Jaruzel's Quake 2 Maps</a></li>
+         <li><a href="https://the-eye.eu/public/">The Eye</a></li>
+         <li><a href="https://bvffalo.land/">Bvffalo Land</a></li>
+         <li><a href="https://soda.privatevoid.net/num/links/">num@soda's Links</a></li>
+         <li><a href="https://peelopaalu.neocities.org/">Peelopaalu</a></li>
+         <li><a href="https://websitereview.neocities.org/">Website Review<a></li>
+         <li><a href="https://terra.finzdani.net/">Terra</a></li>
+         <li><a href="https://dotat.at/:/">Tony Finch's Link Log</a></li>
+         <li><a href="http://tilde.town/~dan/">Dan's Glorious Bookmark Emporium</a></li>
+         <li><a href="https://www.paritybit.ca/links">Partybit's Links</a></li>
+         <li><a href="https://sjmulder.nl/en/textonly.html">Hyperlinked Text</a></li>
+         <li><a href="http://bitcheese.net/">Bitcheese</a></li>
+         <li><a href="https://zayn.world/links.html">Zayn.World Links</a></li>
+         <li><a href="https://fatkitten.xyz/websites/helpfullWebsites.html">FatKitten's Helpful Websites</a></li>
+         <li><a href="http://satoarchives.com/Archive/">Osamu Sato Archive</a></li>
+       </ul>
+       <li><u>Public Domain</u></li>
+       <ul>
+         <li><a href="https://www.gutenberg.org/">Project Gutenberg</a> - [<span class="popup" onclick="myFunction()" style="color:#c72026;">about<span class="popuptext" id="myPopup"><span style="color:#c72026">[about]</span>: In 1971 Michael Hart creates the eBook, and along with it, he founded the eBook's caretakers, Project Gutenberg. Since then, for 50 years and counting, volunteers who take part in the project create ebooks of public domain works for people to read, enjoy and share. </span></span>]</li>
+         <li><a href="https://publicdomainreview.org/">Public Domain Review</a></li>
+       </ul>
+       <li><u>Books</u></li>
+       <ul>
+         <li><a href="https://www.bl.uk/catalogues-and-collections/digital-collections">The British Library Digital Collections</a></li>
+         <li><a href="https://digitalcollections.nypl.org/">The New York Public Library Digital Collections</a></li>
+         <li><a href="https://www.nls.uk/">National Library of Scotland</a></li>
+         <li><a href="https://www.nationalarchives.gov.uk/">The National Archives</a></li>
+         <li><a href="https://www.biodiversitylibrary.org/">The Biodiversity Library</a><span style="color: #c72026; font-family:drmarz"> NEW!</span></li>
+         <li><a href="http://www.public-library.uk/"> Public Library UK</a></li>
+         <li><a href="https://www.overdrive.com/explore"> OverDrive Online Public Libraries</a></li>
+         <li><a href="https://www.deadseascrolls.org.il/">The Leon Livy Dead Sea Scrolls Digital Library</a></li>
+         <li><a href="https://etcsl.orinst.ox.ac.uk/edition2/etcslbycat.php">Mesopotamian Literature</a></li>
+         <li><a href="https://www.forgottenbooks.com/en">Forgotten Books</a></li>
+         <li><a href="https://www.sacred-texts.com/">Sacred Texts</a></li>
+         <li><a href="http://www.survivorlibrary.com/library-download.html">Survivor Library</a></li>
+         <li><a href="https://wiki.chadnet.org/">Library of Chadnet</a></li>
+         <li><a href="https://mega.nz/folder/jlEwhYyJ#iK4mVC4y5iwk_cr3eIpX4g">The Temple of the Solomon King</a></li>
+         <li><a href="https://pastebin.com/K3ipP4tm">8chan's /fringe/ Library Pastebin Backup</a></li>
+         <li><a href="https://itsfoss.tradepub.com/">Information Technology Research Library</a></li>
+         <li><a href="http://memetics.timtyler.org/books/">Memetics Books</a></li>
+         <li><a href="https://docs.google.com/document/d/17iiFxZ9PYXXxSqWHdU2YoPsGfJr90w8aIG_evqc1wiY/edit">Kiahdaj's Absolute Guide to Tulpas</a></li>
+         <li><a href="https://darkbooks.org/">Dark Books Magic Library</a></li>
+         <li><a href="https://archive.org/details/additional_collections">Internet Archive Additional Collections</a></li>
+         <li><a href="https://eprint.iacr.org/complete/">Cryptology ePrint Archive</a></li>
+         <li><a href="https://theanarchistlibrary.org/special/index">The Anarchist Library</a></li>
+         <li><a href="http://green-anarchy.wikidot.com/">Green Anarchy Library</a></li>
+         <li><a href="https://www.marxists.org/">Marxists Internet Archive</a></li>
+         <li><a href="http://www.freeocalan.org/books/#/">Books by Abdullah Ocalan</a></li>
+         <li><a href="https://thewastedworld.wordpress.com/2018/11/03/a-theory-fiction-reading-list/">A Theory-Fiction Reading List</a></li>
+         <li><a href="https://www.hplovecraft.com/writings/texts/">Electronic Texts of H.P. Lovecraft's Works</a></li>
+         <li><a href="https://mega.nz/folder/ENkWBBIQ#PuvsOfr3m-f3Op1mxsqrNw">pg Library</a></li>
+         <li><a href="https://vintageapple.org/macprogramming/">Vintage Macintosh Programming Book Library</a></li>
+         <li><a href="https://eldritchdata.neocities.org/">Eldritch Data</a></li>
+         <li><a href="https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA">Cyberpunk and Security Mega</a></li>
+         <li><a href="http://www.textbookofbacteriology.net/index.html">Todar's Online Textbook of Bacteriology</a></li>
+         <li><a href="https://sites.google.com/a/umich.edu/imladjov/home">Ian Mladjov's Resources</a></li>
+         <li><a href="https://cryptokang.link/library/">Cryptokang's Library</a></li>
+       </ul>
+       <li><u>Illustrations/Artwork</u></li>
+       <ul>
+         <li><a href="https://www.oldbookillustrations.com/">Old Book Illustrations</a></li>
+         <li><a href="https://asba-art.org/"> American Society of Botanical Artists</a></li>
+       </ul>
+       <li><u>Academic Papers and Journals</u></li>
+       <ul>
+         <li><a href="https://www.ncbi.nlm.nih.gov/pmc/">US National Library of Medicine</a></li>
+         <li><a href="https://sci-hub.ru/">Sci-Hub</a><span style="color: #c72026; font-family:drmarz"> NEW!</span></li>
+         <li><a href="https://arxiv.org/">arXiv</a><span style="color: #c72026; font-family:drmarz"> NEW!</span></li>
+       </ul>
+       <li><u>Maps/Cartography</u></li>
+       <ul>
+         <li><a href="https://www.davidrumsey.com/">David Rumsey Map Collection</a></li>
+         <li><a href="https://sites.google.com/a/umich.edu/imladjov/maps"> Ian Mladjov's Maps</a></li>
+       </ul>
+       <li><u>Government Documents</u></li>
+       <ul>
+         <li><a href="https://www.cia.gov/readingroom/">CIA FOIA Reading Room</a></li>
+         <ul><li><a href="https://www.cia.gov/readingroom/collection/stargate">CIA Stargate Project</a></li></ul>
+         <li><a href="https://vault.fbi.gov/">FBI The Vault</a></li>
+         <li><a href="https://open.defense.gov/transparency/foia.aspx">DoD FOIA</a></li>
+         <li><a href="https://efoia.cce.af.mil/app/ReadingRoom.aspx">USAF FOIA Reading Room</a></li>
+         <li><a href="https://www.rmda.army.mil/readingroom/">USArmy FOIA Reading Room</a></li>
+         <li><a href="https://www.hqmc.marines.mil/Agencies/USMC-FOIA/USMC-FOIA-Reading-Room/">USMC FOIA Reading Room</a></li>
+         <li><a href="https://www.secnav.navy.mil/foia/readingroom/SitePages/Home.aspx">USNavy FOIA Reading Room</a></li>
+         <li><a href="https://www.dhs.gov/foia-library">DHS FOIA Library</a></li>
+         <li><a href="https://www.dea.gov/foia/foia-library">DEA FOIA Library</a></li>
+         <li><a href="https://www.energy.gov/management/foia-reading-room">DoE FOIA Reading Room</a></li>
+         <li><a href="https://home.treasury.gov/footer/freedom-of-information-act/electronic-reading-room">USDT FOIA Reading Room</a></li>
+         <li><a href="https://www.justice.gov/archives/doj-archive">DoJ Archive</a></li>
+         <li><a href="https://www.justice.gov/oip/foia-library">DoJ FOIA Library</a></li>
+         <li><a href="https://foia.cdc.gov/app/ReadingRoom.aspx">CDC FOIA Reading Room</a></li>
+         <li><a href="https://www.ftc.gov/foia/foia-reading-room">FTC FOIA Reading Room</a></li>
+         <li><a href="https://www.atf.gov/resource-center/foia-library">ATF FOIA Library</a></li>
+         <li><a href="https://www.osec.doc.gov/opog/FOIA/FOIA_elibrary.html">OPOG FOIA E-Library</a></li>
+         <li><a href="https://curia.europa.eu/en/content/juris/c2_juris.htm">CURIA EU Unsolved Cases</a></li>
+       </ul>
+    </ul>
+  </p>
+<img src="tailpiece.png" class="center" width="50%" >
+</div>
+
+<div id="Curiosities" class="tabcontent">
+<img src="headpiece2.png" class="center" width="100%">
+  <h3>Curiosities</h3>
+  <p>
+    <ul>
+        <li><a href="http://theoldnet.com/">The Old Net</a><span style="color: #c72026; font-family:drmarz"> NEW!</span></li>
+        <li><a href="http://www.ccru.net/index.htm">Cybernetic Culture Research Unit</a></li>
+        <li><a href="http://packet.city/">Packet City</a>(WARNING: LOUD)</li>
+        <li><a href="https://michaelbach.de/ot/">Michael Back's Illusions</a></li>
+        <li><a href="http://sentimentalcorp.org/">Sentimental Corp.</a></li>
+        <li><a href="http://lab.serotoninphobia.info/">Serotoninphobia Lab</a></li>
+        <li><a href="http://iiada.serotoninphobia.info/">Serotoninphobia IIADA</a></li>
+        <li><s>Occatl</s> (DEFUNCT)</li>
+        <li><s>2Occatl</s> (DEFUNCT)</li>
+        <li><a href="http://alexchiu.com/">Alex Chiu's Immortality Ring</a></li>
+        <li><a href="https://fusionanomaly.net/nodebase.html">Fusion Anomaly</a></li>
+        <li><a href="https://www.exploratorium.edu/origins/">Exploratorium Origins</a></li>
+        <li><a href="https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html">If The Moon Were Only 1 Pixel</a></li>
+        <li><a href="http://info.cern.ch/">The First Website</a></li>
+        <li><a href="https://petittube.com/index.php">Petit Tube</a></li>
+        <li><a href="http://libraryofbabel.info/">Library of Babel</a></li>
+        <li><a href="https://www.404pagefound.com/">404 Page Found</a></li>
+        <li><a href="http://pespmc1.vub.ac.be/DEFAULT.html">Principia Cybernetica Web</a></li>
+        <li><a href="https://wearehostsformemes.com/">We Are Hosts For Memes</a></li>
+        <li><a href="http://longmontpotioncastle.com/">Longmont Potion Castle</a></li>
+        <li><a href="http://www.therestartpage.com/#">The Restart Page</a></li>
+        <li><a href="http://godhatesshrimp.com/">God Hates Shrimp</a></li>
+        <li><a href="http://www.seanbaby.com/">Sean Baby</a></li>
+        <li><a href="http://www.myth-and-fantasy.com/index2.html">Realm Of Myth And Fantasy</a></li>
+        <li><a href="https://twcclassics.com/">The Weather Channel Classics</a></li>
+        <li><a href="https://www.bentoandstarchky.com/">Bento And Starchky</a></li>
+        <li><a href="http://mindovermatter.ru/">Mind Over Matter RU</a></li>
+        <li><a href="https://web.archive.org/web/20210804004530/http://youfellasleepwatchingadvd.com/">You Fell Asleep Watching A DVD</a></li>
+        <li><s>ZenoSyne</s>(DEFUNCT)</li>
+        <li><s>DagonBytes</s>(DEFUNCT)</li>
+        <li><a href="https://www.windows93.net/">Windows93</a></li>
+        <li><a href="http://satania.moe/">Satania. The Best Waifu. Ever.</a></li>
+        <li><a href="https://www.yourworldoftext.com/">Your World Of Text</a></li>
+        <li><a href="http://www.effectgames.com/demos/worlds/">Living Worlds</a></li>
+        <li><a href="https://www.cameronsworld.net/">Cameron's World</a></li>
+        <li><a href="https://alwaysjudgeabookbyitscover.com/">Always Judge A Book By Its Cover</a></li>
+        <li><a href="http://www.dhmo.org/">Dihydrogen Monoxide Research Division</a></li>
+        <li><a href="http://www.johnclilly.com/index.html">The John C. Lilly Homepage</a></li>
+        <li><a href="http://www.horg.com/horg/"> The Holotypic Occlupanid Research Group</a></li>
+    </ul>
+  </p>
+<img src="tailpiece.png" class="center" width="50%" >
+</div> 
+<div id="Cyberpunk" class="tabcontent">
+<img src="headpiece2.png" class="center" width="100%">
+  <h3>Cyber Stuff</h3>
+  <p>
+    <ul>
+         <li>Computer Science</li>
+         <ul>
+           <li><a href="https://github.com/">Github</a></li>
+           <li><a href="https://instantworkstation.com/virtual-machines">Instant Workstation</a></li>
+           <li><a href="https://github.com/Monkeyfume/thinkpad-tech-tree/blob/master/thinkpad-tech-tree.txt">Thinkpad Tech Tree</a></li>
+           <li><a href="https://n-o-d-e.net/">N-O-D-E</a></li>
+           <li><a href="https://winworldpc.com/library/operating-systems">WinWorld Operating Sytems Library</a></li>
+           <li><a href="https://www.dwitter.net/">Dwitter</a></li>
+           <li><a href="http://elm-chan.org/">Electronic Life Manufacturing</a></li>
+           <li><a href="https://ajk.me/building-an-ibm-3270-terminal-controller">Building an IBM 3270 Terminal Controller</a></li>
+           <li><a href="https://colah.github.io/">Colhan's Machine Learning Blog</a></li>
+           <li><a href="https://www.windytan.com/">Windytan</a></li>
+           <li><a href="https://github.com/t3chnoboy/awesome-awesome-awesome">A Curated List of Lists of Awesome Links</a></li>
+           <li><a href="https://collection.mataroa.blog/">Mataroa List of Tech Blogs</a></li>
+         </ul>
+    </ul>
+    <ul>
+         <li>Cryptography</li>
+         <ul>
+           <li><a href="https://www.cryptomuseum.com/index.htm">Crypto Museum</a></li>
+           <li><a href="https://www.metzdowd.com/pipermail/cryptography/">The Cryptography Mailing List Archives</a></li>
+           <li><a href="https://toc.cryptobook.us/">A Graduate Course in Applied Cryptography</a></li>
+         </ul>
+    </ul>
+    <ul>
+         <li>Security/Pen Testing</li>
+         <ul>
+           <li><a href="http://www.subliminalhacking.net/">Subliminal Hacking</a></li>
+           <li><a href="https://f0rb1dd3n.com/">f0rb1dd3n</a></li>
+           <li><s>Pwnie Express</s> (DEFUNCT)</li>
+           <li><a href="https://www.social-engineer.org/">Social-Engineer.org</a></li>
+           <li><s>Dissecting the Hack</s> (DEFUNCT)</li>
+           <li><a href="https://netragard.com/">NetraGrad</a></li>
+           <li><a href="https://pwnagotchi.ai/">Pwnagotchi</a></li>
+           <li><a href="https://pastebin.com/aPr5R1pj">The paranoid #! Security Guide Pastebin</a></li>
+           <li><a href="https://docs.google.com/spreadsheets/d/12bT8APhWsL-P8mBtWCYu4MLftwG1cPmIL25AEBtXDno/edit#gid=937533738"> The NetSec Cyber Security Google Doc</a></li>
+           <li><a href="https://overthewire.org/wargames/">Over The Wire Wargames</a></li>
+           <li><a href="https://lightcommands.com/">Light Commands:Laser-Based Audio Injection on Voice-Controllable Systems</a></li>
+           <li><a href="https://www.privacyguides.org/">Privacy Guides</a></li>
+         </ul>
+    </ul>
+  </p>
+<img src="tailpiece.png" class="center" width="50%" >
+</div>
+<div id="Fiction" class="tabcontent">
+<img src="headpiece2.png" class="center" width="100%">
+  <h3>Web Fiction</h3>
+  <p>
+    <ul>
+      <li>Singular Universes</li>
+      <ul>
+        <li><a href="https://scp-wiki.wikidot.com/">SCP-Foundation</a></li>
+        <li><a href="http://backrooms-wiki.wikidot.com/">The Backrooms Wiki</a></li>
+        <li><a href="https://radiopublic.com/welcome-to-night-vale-3GZp96">Welcome to Night Vale</a></li>
+        <li><a href="https://www.mysteryfleshpitnationalpark.com/">Mystery Flesh Pit National Park</a></li>
+        <li><a href="https://www.youtube.com/watch?v=H4dGpz6cnHo&amp;list=PLVAh-MgDVqvDUEq6qDXqORBioE4Yhol_z">Kane Pixels - The Backrooms</a></li>
+        <li><a href="https://jenniverse.com/">The Jenniverse</a></li>
+        <ul><li><a href="http://unicornjelly.com/">Unicorn Jelly</a></li>
+        <li><a href="http://pasteldefender.com/#Pastel">Pastel Defender Heliotrope</a></li>
+        <li><a href="http://pasteldefender.com/to save her archive.html">To Save Her</a></li></ul>
+      </ul>
+      <li>ARGs</li>
+      <ul>
+        <li><a href="https://uncovering-cicada.fandom.com/wiki/Uncovering_Cicada_Wiki">Cicada 3301 Wiki</a> (FINISHED?)</li>
+        <li><a href="https://web.archive.org/web/20200120171956/http://www.louisecypher.com/evil.eu/evilavatar.html"><s>Louise Cypher</s></a> (DEFUNCT/FINISHED?)</li>
+        <li><a href="http://973-eht-namuh-973.com/">The Human</a></li>
+        <li><a href="https://hypnagogicarchive.neocities.org/">Hypnagogic Archive</a></li>
+        <li><a href="https://gravityfalls.fandom.com/wiki/Cipher_Hunt">Cipher Hunt</a> (FINISHED)<li>
+      </ul>
+      <li>Original Fiction Websites</li>
+      <ul>
+        <li><a href="https://www.webtoons.com/en/">Webtoon</a></li>
+        <li><a href="https://otakuworld.com/shibai/0shibai.html">Kameshibai - Digital Japanese Paper Theater</a></li>
+      </ul>
+      <li>Fan Fiction Websites</li>
+      <ul>
+        <li><a href="https://archiveofourown.org/">Archive of Our Own</a></li>
+        <li><a href="https://www.fanfiction.net/">Fanfiction.net</a></li>
+        <li><a href="https://www.wattpad.com/">Wattpad</a></li>
+      </ul>
+    </ul>
+  </p>
+<img src="tailpiece.png" class="center" width="50%" >
+</div>
+<div id="Pirate" class="tabcontent">
+<img src="headpiece2.png" class="center" width="100%">
+  <h3><i>Legal</i> Content</h3>
+  <p>
+    <ul>
+      <li>General</li>
+      <ul>
+        <li><a href="https://proxybay.github.io/">Proxybay</a></li>
+      </ul>
+      <li>Movies/TV/Anime</li>
+      <ul>
+        <li><a href="https://mediacenter.neocities.org/">MediaCenter</a></li>
+        <li><a href="https://www.rippersanime.info/">Ripper's Anime</a></li>
+        <li><a href="https://nyaa.si/">Nyaa.si</a></li>
+      </ul>
+    </ul>
+  </p>
+<img src="tailpiece.png" class="center" width="50%">
+</div>
+</div>
+<!-- <div id="audiobar"> -->
+<!--   <img src="sidebar.png" width="33%" align="left"> -->
+<!--   <audio class="audioplayer" controls autoplay loop volume_slider id="myaudio"> -->
+<!--     <source src="https://vgmsite.com/soundtracks/minecraft-nether-update/csiuqnreba/2%20-%20Rubedo.mp3" width="33%"> -->
+<!--   </audio> -->
+<!--     <img src="sidebar2.png" width="33%" align="right"> -->
+<!-- </div> -->
+
+<div id="bottom"></div>
+ 
+</div>
+
+</div>
+
+
+<div id="credit"><a href="https://repth.neocities.org/index.html">@Repth</a>
+</div>
+
+</body>
+ 
+
+<!-- Mirrored from capstasher.neocities.org/links by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2025 08:19:32 GMT -->
+</html>

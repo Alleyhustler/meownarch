@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from capstasher.neocities.org/article1 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2025 08:22:17 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Project of Projects</title>
+    <link rel="icon"  type="image/png" href="https://capstasher.neocities.org/favicon.png">
+ 
+<style>
+
+@font-face {
+  font-family: Dovestype;
+  src: url(https://capstasher.neocities.org/Dovestype.ttf);
+}
+@font-face {
+  font-family: News;
+  src: url(https://capstasher.neocities.org/OldNewspaperTypes.ttf);
+}
+div {
+  font-family: News;
+  font-size: 12px
+}
+
+body{
+ background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.4), 
+          rgba(0, 0, 0, 0.4)
+        ), url(https://capstasher.neocities.org/camo.gif);
+  background-blend-mode: darken;
+}
+ 
+#all{
+  width: 60%;
+}
+ 
+#side{
+  color: #25272b;
+  text-align: center;
+  width: 14%;
+  height: 100%;
+  float: left;
+  background-color: #B9E9B7;
+  padding: 10px;
+  border: 0 0 1px 1px
+  border-style: solid;
+  border-color: #3d2120;
+}
+ 
+#sideicon{
+  top: 0px
+  right: 0px
+  width: 5%
+}
+ 
+.sideheader{
+  font-weight: normal;
+  margin: 5px 0px 0px 5px;
+  font-size: 25px;
+  font-family: 'Dovestype';
+}
+ 
+#aboutheader{
+  margin: 0px 0px -5px 0px;
+}
+ 
+#about{
+  text-align: justify;
+  margin: 0px 0px 10px 0px;
+  letter-spacing: 1px;
+}
+ 
+#main{
+  color:#25272b;
+  width: 80%;
+  height: 98vh;
+  float: left;
+  background-color: #F1ECE5;
+  overflow: scroll;
+  overflow-x: hidden;
+  box-shadow: 7px 7px #25272b;
+}
+ 
+#header{
+  background-image: url('https://capstasher.neocities.org/article1-header.png');
+  background-size: cover;
+  background-color: #e98583;
+  height: 15%;
+  border-bottom: 1px solid #6b2d2b;
+  background-position: top left;
+  padding: 0.93%;
+  position: relative;
+}
+ 
+#header h1{
+  font-family: Dovestype;
+  font-weight: bold;
+  color: #c72026;
+  font-size: 105px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0px #25272b;
+  margin: 3px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+ 
+.subheader{
+  font-weight: normal;
+  font-size: 25px;
+  margin: 0px 0px -5px 0px;
+  padding: 10px 10px 0px 10px;
+  font-family: 'News';
+}
+ 
+.postcontainer{
+  padding: 10px;
+  position: relative;
+}
+ 
+.iconanddatecontainer{
+  height: 92px;
+  border-bottom: 2px dashed #e98583;
+  font-family: 'Special Elite', serif;
+}
+ 
+.icon{
+  border: 1px solid #3d2120;
+}
+ 
+.posttext{
+  padding: 0px 15px 0px 15px;
+  letter-spacing: 1px;
+  text-align: justify;
+  margin-top: -4px;
+}
+ 
+.icon{
+  position: absolute;
+}
+ 
+.date{
+position: absolute;
+right: 10px;
+}
+ 
+a{
+text-decoration: none;
+color: #c72026;
+}
+ 
+::-webkit-scrollbar{
+width: 5px; 
+}
+ 
+::-webkit-scrollbar-track{
+background-color: transparent;
+}
+ 
+::-webkit-scrollbar-thumb{
+background-color: #e98583;
+}
+ 
+#bg{
+position:fixed;
+bottom: 0px;
+right: 0;
+opacity: 0.9;
+}
+ 
+#credit{
+font-size: 12px;
+position: fixed;
+bottom: 0;
+right: 0;
+z-index: 2;
+}
+
+#bg{
+linear-gradient(rgba(0, 0, 0, 0.4))
+position:fixed;
+bottom: 0px;
+right: 0;
+opacity: 1;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #F1ECE5;
+  color: #25272b;
+  text-align: center;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  outline-style:solid;
+  outline-color:#25272b;
+  outline-width:1px;
+  box-shadow: 4px 4px #25272b;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.2s;
+  animation: fadeIn 0.2s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div id="all">
+ 
+<div id="main">
+ 
+<div id="header"><h1>ARTICLE #001</h1></div>
+ 
+<!-- POST 1 -->
+<div>
+<br><br><br><br><br><br>
+<div style="outline-style: double; outline-color:#25272b; width: 50%" class="center">
+<h3 style="text-align:center"><br>A</h3>
+<h1 style="text-align:center; font-size:30px;color:#c72026;">PROJECT OF PROJECTS</h1>
+<h2 class="subheader" style="text-align:center;">SOME BELIEFS</h2>
+<h3 style="text-align:center">AND</h3>
+<h2 class="subheader" style="text-align:center;margin:-4%">IDEAS</h2>
+<br>
+<img src="https://capstasher.neocities.org/manuscript.png" class="center" width="50%">
+<img src="https://capstasher.neocities.org/separator.png" class="center" width="50%">
+<h2 style="text-align:center; font-size:20px;"> PUBLISHED IN THE YEAR MMXXII</h2>
+<br>
+</div>
+<br><br><br><br><br><br><br>
+<!-- START ENTRY HERE -->
+<div style="width: 60%" class="center">
+<img src="https://capstasher.neocities.org/Letter_Headpiece_1st.png" width="50%" class="center">
+<div class="posttext">
+<a id="introduction" style="color:#25272b"><h3> Abstract</h3></a>
+<p> A while back it became obvious to me that we need of a place where information can be distributed freely, regarding topics on which information is dificult to find. The reasons for the difficulty are varied. On one hand, the topic may be too niche, and as such there isnt enough drive in the community surrounding it to make good resources on the topic. On the other hand, perhaps the resources already exist, but are in a remote area of the internet, or may be actively suppressed by institutions. During the COVID-19 pandemic, and even in the years before it, suppression of information became common place.<span class="popup" onclick="myFunction()" style="color:#c72026;text-decoration: underline">𐤀<span class="popuptext" id="myPopup"><span style="color:#c72026">𐤀</span>. Or perhaphs I'm mistaken. Perhaps this was always the practice, but for some reason it only became easier and easier to observe. Who knows? I'll do some more research into this on a future article, as this really isnt the place for that.</span></span> </p>
+ 
+</div>
+<div class="posttext">
+<a id="1" style="color:#25272b"><h3> 1</h3></a>
+<p style="margin:0px 0px 0px 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare odio et mi ullamcorper convallis. Quisque posuere finibus condimentum. Cras euismod, nulla et finibus finibus, nulla leo interdum dolor, vel malesuada ipsum enim a diam.</p>
+ 
+<p>In gravida eleifend risus, vitae fringilla lacus lacinia scelerisque. Duis arcu sapien, pulvinar lacinia nunc non, scelerisque venenatis mauris. Nulla pulvinar turpis non odio lacinia, pulvinar convallis nisl pellentesque.</p>
+ 
+<p>Mauris sit amet elit urna. Donec et ipsum dictum, posuere nisl a, luctus libero. Morbi pulvinar ex ut massa fermentum, vel lacinia ante placerat. Mauris hendrerit ut tortor eu hendrerit. Pellentesque tincidunt quam ipsum, non euismod dolor rhoncus ac. Integer ut neque lorem. Nullam sed hendrerit quam, finibus rhoncus mauris.</p>
+ 
+</div>
+<div class="posttext">
+<a id="2" style="color:#25272b"><h3> 2</h3></a>
+<p style="margin:0px 0px 0px 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare odio et mi ullamcorper convallis. Quisque posuere finibus condimentum. Cras euismod, nulla et finibus finibus, nulla leo interdum dolor, vel malesuada ipsum enim a diam.</p>
+ 
+<p>In gravida eleifend risus, vitae fringilla lacus lacinia scelerisque. Duis arcu sapien, pulvinar lacinia nunc non, scelerisque venenatis mauris. Nulla pulvinar turpis non odio lacinia, pulvinar convallis nisl pellentesque.</p>
+ 
+<p>Mauris sit amet elit urna. Donec et ipsum dictum, posuere nisl a, luctus libero. Morbi pulvinar ex ut massa fermentum, vel lacinia ante placerat. Mauris hendrerit ut tortor eu hendrerit. Pellentesque tincidunt quam ipsum, non euismod dolor rhoncus ac. Integer ut neque lorem. Nullam sed hendrerit quam, finibus rhoncus mauris.</p>
+ 
+</div>
+<div class="posttext">
+<a id="3" style="color:#25272b"><h3> 3</h3></a>
+<p style="margin:0px 0px 0px 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare odio et mi ullamcorper convallis. Quisque posuere finibus condimentum. Cras euismod, nulla et finibus finibus, nulla leo interdum dolor, vel malesuada ipsum enim a diam.</p>
+ 
+<p>In gravida eleifend risus, vitae fringilla lacus lacinia scelerisque. Duis arcu sapien, pulvinar lacinia nunc non, scelerisque venenatis mauris. Nulla pulvinar turpis non odio lacinia, pulvinar convallis nisl pellentesque.</p>
+ 
+<p>Mauris sit amet elit urna. Donec et ipsum dictum, posuere nisl a, luctus libero. Morbi pulvinar ex ut massa fermentum, vel lacinia ante placerat. Mauris hendrerit ut tortor eu hendrerit. Pellentesque tincidunt quam ipsum, non euismod dolor rhoncus ac. Integer ut neque lorem. Nullam sed hendrerit quam, finibus rhoncus mauris.</p>
+ 
+</div>
+<div class="posttext">
+<a id="conclusion" style="color:#25272b"><h3> Conclusion</h3></a>
+<p style="margin:0px 0px 0px 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare odio et mi ullamcorper convallis. Quisque posuere finibus condimentum. Cras euismod, nulla et finibus finibus, nulla leo interdum dolor, vel malesuada ipsum enim a diam.</p>
+ 
+<p>In gravida eleifend risus, vitae fringilla lacus lacinia scelerisque. Duis arcu sapien, pulvinar lacinia nunc non, scelerisque venenatis mauris. Nulla pulvinar turpis non odio lacinia, pulvinar convallis nisl pellentesque.</p>
+ 
+<p>Mauris sit amet elit urna. Donec et ipsum dictum, posuere nisl a, luctus libero. Morbi pulvinar ex ut massa fermentum, vel lacinia ante placerat. Mauris hendrerit ut tortor eu hendrerit. Pellentesque tincidunt quam ipsum, non euismod dolor rhoncus ac. Integer ut neque lorem. Nullam sed hendrerit quam, finibus rhoncus mauris.</p>
+ 
+</div>
+</div>
+</div>
+</div>
+ 
+<!-- SIDEBAR STUFF -->
+ 
+<div id="side">
+<!-- SIDE ICON -->
+<img src="https://capstasher.neocities.org/tab.png" id="sideicon" align="right" style="right:0px;top:0px;width:20%;margin:-10px;">
+ <br><br>
+<h2 class="sideheader" id="aboutheader">Article Brief</h2>
+<p id="about">Cap stasher has, in the works, a project which aims to expand access to information, specifically info about issues from as many perspectives as possible. The project is complex and has many moving parts. In this article the author looks in detail at these parts.</p>
+ 
+<h2 class="sideheader">Chapters</h2>
+<p><a href="#introduction">Abstract</a></p>
+<p><a href="#1">1</a></p>
+<p><a href="#2">2</a></p>
+<p><a href="#3">3</a></p>
+<p><a href="#conclusion">Conclusion</a></p>
+<h2 class="sideheader">Choons</h2>
+ <audio id="player" src="https://vgmsite.com/soundtracks/metal-gear-solid-3-snake-eater-the-complete-soundtrack-flac-gamerip/mgfjvglx/2-08 Old Metal Gear.mp3" loop></audio>
+<div>
+    <button onclick="document.getElementById('player').play()">Play</button>
+    <button onclick="document.getElementById('player').pause()">Pause</button>
+    <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button>
+</div>
+<h3 class="center">Return to Articles:</h3>
+<a href="https://capstasher.neocities.org/articles.html"><img src="https://capstasher.neocities.org/back.png" class="center" width="90%"></a>
+</div>
+<!-- BG RENDER HERE -->
+ </div>
+<div id="bg"><img src="https://capstasher.neocities.org/snake.png" width="400px"></div>
+<div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
+ <script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+</body>
+ 
+
+
+<!-- Mirrored from capstasher.neocities.org/article1 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2025 08:22:17 GMT -->
+</html>
+

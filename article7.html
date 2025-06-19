@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from capstasher.neocities.org/article7 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2025 08:19:43 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locked Out of Creation</title>
+    <link rel="icon"  type="image/png" href="favicon.png">
+ 
+<style>
+
+@font-face {
+  font-family: Dovestype;
+  src: url(Dovestype.ttf);
+}
+@font-face {
+  font-family: News;
+  src: url(OldNewspaperTypes.ttf);
+}
+div {
+  font-family: News;
+  font-size: 12px
+}
+
+body{
+ background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.4), 
+          rgba(0, 0, 0, 0.4)
+        ), url(camo.gif);
+  background-blend-mode: darken;
+}
+ 
+#all{
+  width: 60%;
+}
+ 
+#side{
+  color: #25272b;
+  text-align: center;
+  width: 14%;
+  height: 100%;
+  float: left;
+  background-color: #B9E9B7;
+  padding: 10px;
+  border: 0 0 1px 1px
+  border-style: solid;
+  border-color: #3d2120;
+}
+ 
+#sideicon{
+  top: 0px
+  right: 0px
+  width: 5%
+}
+ 
+.sideheader{
+  font-weight: normal;
+  margin: 5px 0px 0px 5px;
+  font-size: 25px;
+  font-family: 'Dovestype';
+}
+ 
+#aboutheader{
+  margin: 0px 0px -5px 0px;
+}
+ 
+#about{
+  text-align: justify;
+  margin: 0px 0px 10px 0px;
+  letter-spacing: 1px;
+}
+ 
+#main{
+  color:#25272b;
+  width: 80%;
+  height: 98vh;
+  float: left;
+  background-color: #F1ECE5;
+  overflow: scroll;
+  overflow-x: hidden;
+  box-shadow: 7px 7px #25272b;
+}
+ 
+#header{
+  background-image: url('article1-header.png');
+  background-size: cover;
+  background-color: #e98583;
+  height: 15%;
+  border-bottom: 1px solid #6b2d2b;
+  background-position: top left;
+  padding: 0.93%;
+  position: relative;
+}
+ 
+#header h1{
+  font-family: Dovestype;
+  font-weight: bold;
+  color: #c72026;
+  font-size: 105px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0px #25272b;
+  margin: 3px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+ 
+.subheader{
+  font-weight: normal;
+  font-size: 25px;
+  margin: 0px 0px -5px 0px;
+  padding: 10px 10px 0px 10px;
+  font-family: 'News';
+}
+ 
+.postcontainer{
+  padding: 10px;
+  position: relative;
+}
+ 
+.iconanddatecontainer{
+  height: 92px;
+  border-bottom: 2px dashed #e98583;
+  font-family: 'Special Elite', serif;
+}
+ 
+.icon{
+  border: 1px solid #3d2120;
+}
+ 
+.posttext{
+  padding: 0px 15px 0px 15px;
+  letter-spacing: 1px;
+  text-align: justify;
+  margin-top: -4px;
+}
+ 
+.icon{
+  position: absolute;
+}
+ 
+.date{
+position: absolute;
+right: 10px;
+}
+ 
+a{
+text-decoration: none;
+color: #c72026;
+}
+ 
+::-webkit-scrollbar{
+width: 5px; 
+}
+ 
+::-webkit-scrollbar-track{
+background-color: transparent;
+}
+ 
+::-webkit-scrollbar-thumb{
+background-color: #e98583;
+}
+ 
+#bg{
+position:fixed;
+bottom: 0px;
+right: 0;
+opacity: 0.9;
+}
+ 
+#credit{
+font-size: 12px;
+position: fixed;
+bottom: 0;
+right: 0;
+z-index: 2;
+}
+
+#bg{
+linear-gradient(rgba(0, 0, 0, 0.4))
+position:fixed;
+bottom: 0px;
+right: 0;
+opacity: 1;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #F1ECE5;
+  color: #25272b;
+  text-align: center;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  outline-style:solid;
+  outline-color:#25272b;
+  outline-width:1px;
+  box-shadow: 4px 4px #25272b;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.2s;
+  animation: fadeIn 0.2s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div id="all">
+ 
+<div id="main">
+ 
+<div id="header"><h1>ARTICLE #007</h1></div>
+ 
+<!-- POST 1 -->
+<div>
+<br><br><br><br><br><br>
+<div style="outline-style: double; outline-color:#25272b; width: 50%" class="center">
+<h1 style="text-align:center; font-size:30px;color:#c72026;margin: -4px">LOCKED OUT</h1>
+<h2 class="subheader" style="text-align:center;">OF</h2>
+<h1 style="text-align:center; font-size:30px;color:#c72026;margin: -4px">CREATION</h1>
+<h3 class="subheader" style="text-align:center; font-size:18px;">;OR</h3>
+<h2 class="subheader" style="text-align:center; font-size:18px;">THE DISCIPLINES AND</h2>
+<h2 class="subheader" style="text-align:center; font-size:18px;">INDUSTRIES LOCKING AWAY</h2>
+<h2 class="subheader" style="text-align:center; font-size:18px;">KNOWLEDGE AND CREATING</h2>
+<h2 class="subheader" style="text-align:center; font-size:18px;">DIGITAL SCARCITY</h2>
+<br>
+<img src="manuscript.png" class="center" width="50%">
+<img src="separator.png" class="center" width="50%">
+<h2 style="text-align:center; font-size:20px;"> PUBLISHED IN THE YEAR MMXXV</h2>
+<br>
+</div>
+<br><br><br><br><br><br><br>
+<!-- START ENTRY HERE -->
+<div style="width: 60%" class="center">
+<div class="posttext">
+<a id="introduction" style="color:#25272b"><h3>The Head</h3></a>
+<p> I have been leading a project in the shadows. A project of colossal size. Something that will likely not see the light of day until the latter part of this half of my life. However setting up the groundwork for such a project is good. This is a story regarding a game, however it is not ABOUT the game. The development of this game has made me realise something which I have been oblivious to throughout my life. And that is the villany of the musical industry; The musical industry and many others. </p>
+<p> I have no knowledge whatsoever of music. I have tried to learn instruments, or to sing, but i have reached the conclusion music requires a certain mode of thinking which I am simply not privy to. The same mode of thinking is required for programming. Both disciplines appeal to the same KIND of person, however the industries developed around them could not be more different. On one side, programming, software as a whole (and even its hardware development sister, engineering), have a strong culture of sharing knowledge. Even that knowledge which is not meant to be shared, for corporate, governmental, or military reasons, will still, one way or another, find its way online, discussed and disected. When that does not happen, people way smarter that I shall ever be manage to reverse engineer software to obtain the function of it. This is the beauty of programming, in my eyes. Every programmer will find the solution to his problem on some 15 year old forum post, or at least enough information to be able to jury-rig the solution. But not the music industry.</p>
+ 
+</div>
+<div class="posttext">
+<a id="1" style="color:#25272b"><h3>The Body</h3></a>
+<p style="margin:0px 0px 0px 0px;">The music industry, part of the broader media and entertainment industries, is the antithesis of what the spirit of creation is. I desire not to venture down a hippy path of flowers and free love with this rant. The Lord only knows the hippies are the biggest hypocrites when it comes to this. However the obvious needs to be stated. The media and entertainment industry, are more than any other industry remaining on Earth, the cause of the lack of freedom of information in the modern world. The length of copyright (70 years after the authors death) has only reached this length because of it. To lock down the spirit of creation behind a contract, with a hefty sum inaccessible to the common man, keeps one locked away from the knowledge and resources that would enable man in current day to become the most creative he can be. While other industries strive for innovation, for they have competitors who will out-inmovate them if they don't, the media industry has found the most financially efficient algorithm for music, and holds it with a tight fist, while letting everything else rot in it's copyright, marble lined dungeon.</p>
+ 
+<p>I wanted to disect an existing song, an ABBA song, for a cover my friend, and <a href="sm-timeline.html">fellow member of the SM</a>, WW, was making for that game I will at some point make. This is when the curtain of the music industry began getting pulled aside. The song does not use simple notes, instead it uses chords. That's alright, surely we have notes on the creation of the song, after all, it is a highly popular track that millions upon millions undoubtedly heard. That is not the case. The very musicians of the music industry protect the creation of their works like a dragon protecting its hoard. Best one can do is attempt to reverse engineer it, but those who do so successfully, as if the hypnosis of the industry has been laid upon them, ensnaring them, will never share it. How may one learn musical techniques without having access to the wealth of knowledge we have built up so far? The creations of the most magnificent songs of the past half century are cloaked in a shadow so thick no candle we are provided with can break through it.</p>
+ 
+<p>Next up was finding the instruments used. Finding the names was not so difficult, there were two synths used, a Roland Jupiter-8 and Yamaha GX-1. Alright, these are pretty old synths, makes sense jugding by the age of the song, surely someone will have made a perfect recreation of their mechanics by now, an emulator of sorts. It took hours upon hours to find them, but I eventually did. Aturia Jupiter 8V and Cherry Audio GX-80. That's it? In the history of these instrument, just an emulator each, both locked behind pricy paywalls? One could pirate, sure, but the very software on which these vitrual instruments run on is not only obscured (buy it and find out if it works on what you're running), but the software itself will also certainly cost more than a car, if you're lucky enough to not find one that runs on a subscribtion model and costs more than your monthly rent. I happened to run into syths which are some of the most famous ones out there. There are synths which do not have a virtual instrument made in their sound. The only way to get that exact sound is approximate it. What will you do when the last one ever made breaks? Are you just going to resign that these sounds are now lost forever? What if Arturia or Cherry Audio, or God knows how many other VST makers are out there go out of business? Is that it? Their virtual instruments forever inaccessible? This cannot stand.</p>
+<p>We need to open source the music industry. That which is good, especially if digital (or digitized) and as such infinitelly reproduceable for free, cannot be allowed to be held in the hands of a few when so many things can be made with it. Digital scarcity is a curse on the net. Lack of freedom of information, in regards with how music is made is a terrible fate for a creative art. Imagine a library of music, all songs, broken down into layers of each instrument, musical sheets available, tabs and tunings for guitars, virtual synths available, and their specific settings for each song made public. You can obtain a specific sound and replicate to use for a whole new song. Music, sound, songs, these are all finite things. We worry currently that we may discover all of it (despite most, especially new, songs being made in 4/4, but I digress).</p>
+<p>Now imagine the opposite of what I described earlier. Imagine we do discover the end of it, and can only make new spins on that which is discovered, but slowly, through the ages, copyright has crept up, and conquered more and more of known sound. Imagine one day the last new composition is copyrighted. All of it is known, but not by you. All of it is under lock and key, in a place you can never access. Listen to the latest song fad on tik tok. That is the extent of it. Spend your savings to listen to Spotify this for a month out of the whole year. Lucky you, you saved up. You have now, for a limited time only, access to a slightly broader range of music than the rest of us. That is the extent of it. You can think of a song, at least, if you didnt get your BCI installed in. But you can't hum it out loud, that's copyright infringement. That's the extent of it.</p>
+ 
+</div>
+<div class="posttext">
+<a id="2" style="color:#25272b"><h3> The Tail</h3></a>
+<p style="margin:0px 0px 0px 0px;">The music industry is not the only place like this. While maths is widely discussed freely, the high level of theoretical physics is locked away. Chemistry is well documented, but biology is obscured through layers of subscription and jargon (think how difficult it is to discuss nutrition, now imagine discussing how to use CRISPR to modify bacteria for any good purpose). Biology has somewhat of a good excuse. There are people out there who would use it to create uncurable plagues, or, I don't know, do gain of function research illegally to make a highly spreadable flu, resulting in the world being on lockdown for a year or two. What I'm saying is, most of these things really do not need to be so hidden, most of this information would do us so much more good if it was freely available, and there is no reason to trust those who have control of it more than the common man. God only knows the power they wield will often be used for financial gain at the cost of any good it could be used for.</p>
+<P>I am not very sure what can be done about it. I have some ideas, but those will take a while to establish, and will require serious manpower to make it happen. But it will happen. Eventually.</P>
+<h3> END. </h3>
+ <img src="tailpiece4.png" class="center" style="width: 60%">
+ <br><br>
+</div>
+</div>
+</div>
+</div>
+ 
+<!-- SIDEBAR STUFF -->
+ 
+<div id="side">
+<!-- SIDE ICON -->
+<img src="tab.png" id="sideicon" align="right" style="right:0px;top:0px;width:20%;margin:-10px;">
+ <br><br>
+<h2 class="sideheader" id="aboutheader">Article Brief</h2>
+<p id="about">capstasher goes on a rant about freedom of information.</p>
+ 
+<h2 class="sideheader">Chapters</h2>
+<p><a href="#introduction">The Head</a></p>
+<p><a href="#1">The Body</a></p>
+<p><a href="#2">The Tail</a></p>
+<h2 class="sideheader">Choons</h2>
+ <audio id="player" src="https://kappa.vgmsite.com/soundtracks/planetarian-the-reverie-of-a-little-planet/lnauxoylvt/04 - The Rain And The Robot.mp3" loop></audio>
+<div>
+    <button onclick="document.getElementById('player').play()">Play</button>
+    <button onclick="document.getElementById('player').pause()">Pause</button>
+    <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button>
+</div>
+<h3 class="center">Return to Articles:</h3>
+<a href="articles.html"><img src="back.png" class="center" width="90%"></a>
+</div>
+<!-- BG RENDER HERE -->
+ </div>
+<div id="bg"><img src="snake.png" width="400px"></div>
+<div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
+ <script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+</body>
+ 
+
+
+<!-- Mirrored from capstasher.neocities.org/article7 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2025 08:19:47 GMT -->
+</html>
+
